@@ -1,585 +1,165 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content=""><meta name="keywords" content=""><meta name="author" content="Hoyup,uuau99999@gmail.com"><meta name="copyright" content="Hoyup"><title>Stay awesome | Hoyup's Blog</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><link rel="dns-prefetch" href="https://hm.baidu.com"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?be487d8575ef4be7f18a9c96d00c8dfd";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();</script><link rel="dns-prefetch" href="https://www.google-analytics.com"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-<!-- Head tag -->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="keyword"  content="">
-    <link rel="shortcut icon" href="/img/favicon.ico">
+ga('create', 'UA-119396317-1', 'auto');
+ga('send', 'pageview');</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="author-info"><div class="author-info__avatar text-center"><img src="https://avatars0.githubusercontent.com/u/6498327"></div><div class="author-info__name text-center">Hoyup</div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/i_dont_wanna_use_default_archives"><span class="pull-left">Articles</span><span class="pull-right">6</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">7</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">1</span></a></div></div></div><nav class="no-bg" id="nav"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Hoyup's Blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="site-info"><div id="site-title">Hoyup's Blog</div><div id="site-sub-title">Stay awesome</div><div id="site-social-icons"><a class="social-icon" href="https://github.com/uuau99999"><i class="fa-github fa"></i></a></div></div></nav><div id="content-outer"><div class="layout" id="content-inner"><div class="recent-post-item article-container"><a class="article-title" href="/2019/04/18/2019-4-17/">2019/4/17</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-04-18</time><div class="content"><p>I will prove you’re wrong. <br><br>Just wait and see.</p>
 
-    <title>
-        
-          Hoyup的博客 | Hoyup&#39;s Blog
-        
-    </title>
+      <script>
+        window.disqusProxy={
+          shortname: 'uuau99999',
+          username: 'uuau99999',
+          server: 'disqus-proxy.ycwalker.com',
+          port: 443,
+          adminAvatar: '/avatars/admin-avatar.jpg',
+          identifier: '2019/04/18/2019-4-17/',
+        };
+        window.disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = window.disqusProxy.identifier;
+        };
+      </script></div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2019/03/14/头条一道面试题-手写节流器/">头条一道面试题-手写节流器</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-03-14</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/节流器/">节流器</a></span><div class="content"><h2 id="论如何实现一个节流器"><a href="#论如何实现一个节流器" class="headerlink" title="论如何实现一个节流器"></a>论如何实现一个节流器</h2><hr>
+<p> 在这里分享一个之前头条的面试手写代码题目，题目很简单，如何自己实现一个节流器，要求400ms最多执行一次，且如果400ms内触发超过1次则当前400ms后再立即触发一次</p>
+<p> 如果是普通的节流器实现还是相对简单的，之前看过debounce的写法，遇到这个不知道怎么实现超过1次400ms后要立即执行一次，吃了大亏。。最后还是在面试官提醒下才写出来，丢脸。。</p>
+<p> 代码如下：<br> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">throttle</span>(<span class="params">fn</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> context = <span class="keyword">this</span>;</span><br><span class="line">    <span class="keyword">var</span> timer;</span><br><span class="line">    <span class="keyword">var</span> last = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> now = <span class="built_in">Date</span>.now();</span><br><span class="line">        <span class="keyword">var</span> interval = now - last;</span><br><span class="line">        <span class="keyword">var</span> next = <span class="built_in">Math</span>.max(<span class="number">0</span>, <span class="number">400</span> - interval);</span><br><span class="line">        <span class="keyword">if</span>(timer) &#123;</span><br><span class="line">            clearTimeout(timer);</span><br><span class="line">            timer = <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        timer = setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            fn.apply(context, <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>, <span class="number">0</span>));</span><br><span class="line">            last = now;</span><br><span class="line">            timer = <span class="literal">null</span>;</span><br><span class="line">        &#125;, next);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p> 当然还可以再改进一下，上面的代码存在一个问题就是在没有超出调用次数时不能保证立即触发，因为会进入到timeout队列。这里可以判断下次时间是为0则立即触发，代码就不写了- -</p>
 
-    <link rel="canonical" href="/">
-
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/hux-blog.min.css">
-
-    <!-- Pygments Highlight CSS -->
-    <link rel="stylesheet" href="/css/highlight.css">
-
-    <!-- Custom Fonts -->
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
-    <!-- Hux change font-awesome CDN to qiniu -->
-    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-
-    <!-- Hux Delete, sad but pending in China
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
-    css'>
-    -->
-
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- ga & ba script hoook -->
-    <script></script>
-</head>
-
-
-<!-- hack iOS CSS :active style -->
-<body ontouchstart="">
-
-    <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Hoyup&#39;s Blog</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <!-- Known Issue, found by Hux:
-            <nav>'s height woule be hold on by its content.
-            so, when navbar scale out, the <nav> will cover tags.
-            also mask any touch event of tags, unfortunately.
-        -->
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-
-                    
-
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/archives/">Archives</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/about/">About</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/tags/">Tags</a>
-                        </li>
-                        
-                    
-                    
-                </ul>
-            </div>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
-<script>
-    // Drop Bootstarp low-performance Navbar
-    // Use customize navbar with high-quality material design animation
-    // in high-perf jank-free CSS3 implementation
-    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
-
-    $toggle.addEventListener('click', handleMagic)
-    function handleMagic(e){
-        if ($navbar.className.indexOf('in') > 0) {
-        // CLOSE
-            $navbar.className = " ";
-            // wait until animation end.
-            setTimeout(function(){
-                // prevent frequently toggle
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        }else{
-        // OPEN
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
-        }
-    }
-</script>
-
-
-    <!-- Main Content -->
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>Hoyup&#39;s Blog</h1>
-                    <!--<hr class="small">-->
-                    <span class="subheading">Stay awesome</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-
-
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        
-
-<!-- USE SIDEBAR -->
-    <!-- Post Container -->
-            <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-            
-                <!-- Main Content -->
-
-
-<div class="post-preview">
-
-    <a href="/2019/04/18/2019-4-17/">
-        <h2 class="post-title">
-            2019/4/17
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            I will prove you’re wrong. Just wait and see.
-
-      
-        ...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by Hoyup on
-        2019-04-18
-    </p>
-
-</div>
+      <script>
+        window.disqusProxy={
+          shortname: 'uuau99999',
+          username: 'uuau99999',
+          server: 'disqus-proxy.ycwalker.com',
+          port: 443,
+          adminAvatar: '/avatars/admin-avatar.jpg',
+          identifier: '2019/03/14/头条一道面试题-手写节流器/',
+        };
+        window.disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = window.disqusProxy.identifier;
+        };
+      </script></div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2018/12/12/h5常见问题汇总/">h5常见问题汇总（持续更新）</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-12-12</time><div class="content"><hr>
+<h2 id="ios设置右键菜单禁用会导致input输入框无法输入（但键盘能正常弹出）"><a href="#ios设置右键菜单禁用会导致input输入框无法输入（但键盘能正常弹出）" class="headerlink" title="ios设置右键菜单禁用会导致input输入框无法输入（但键盘能正常弹出）"></a>ios设置右键菜单禁用会导致input输入框无法输入（但键盘能正常弹出）</h2> <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    <span class="comment">/*webkit浏览器*/</span></span><br><span class="line">    <span class="attribute">-khtml-user-select</span>: none;</span><br><span class="line">    <span class="comment">/*早期浏览器*/</span></span><br><span class="line">    <span class="attribute">-moz-user-select</span>: none;</span><br><span class="line">    <span class="comment">/*火狐*/</span></span><br><span class="line">    <span class="attribute">-ms-user-select</span>: none;</span><br><span class="line">    <span class="comment">/*IE10*/</span></span><br><span class="line">    <span class="attribute">user-select</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">*<span class="selector-pseudo">:not(input</span>, <span class="selector-tag">textarea</span>) &#123;</span><br><span class="line">    <span class="attribute">-webkit-touch-callout</span>: none;</span><br><span class="line">    <span class="comment">/*系统默认菜单被禁用*/</span></span><br><span class="line">    <span class="attribute">-webkit-user-select</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
-
-<div class="post-preview">
-
-    <a href="/2019/03/14/头条一道面试题-手写节流器/">
-        <h2 class="post-title">
-            头条一道面试题-手写节流器
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            论如何实现一个节流器
- 在这里分享一个之前头条的面试手写代码题目，题目很简单，如何自己实现一个节流器，要求400ms最多执行一次，且如果400ms内触发超过1次则当前400ms后再立即触发一次
- 如果是普通的节流器实现还是相对简单的，之前看过debounce的写法，遇到这个不知道怎么实现超过1次400ms后要立即执行一次，吃了大亏。。最后还是在面试官提醒下才写出来，丢脸。。
- 代码如下： 1......
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by Hoyup on
-        2019-03-14
-    </p>
-
-</div>
+<h2 id="safari禁用focus-button边框高亮与ios-touch高亮"><a href="#safari禁用focus-button边框高亮与ios-touch高亮" class="headerlink" title="safari禁用focus button边框高亮与ios touch高亮"></a>safari禁用focus button边框高亮与ios touch高亮</h2><p> css代码如下<br> <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*禁用ios点击高亮 */</span></span><br><span class="line">-webkit-tap-highlight-<span class="attribute">color</span>: transparent;</span><br><span class="line"><span class="comment">/*禁用safari focus高亮*/</span></span><br><span class="line"><span class="attribute">outline</span>: none;</span><br></pre></td></tr></table></figure></p>
 <hr>
-
-<div class="post-preview">
-
-    <a href="/2018/12/12/h5常见问题汇总/">
-        <h2 class="post-title">
-            h5常见问题汇总（持续更新）
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            
-ios设置右键菜单禁用会导致input输入框无法输入（但键盘能正常弹出） 12345678910111213141516* &#123;    /*webkit浏览器*/    -khtml-user-select: none;    /*早期浏览器*/    -moz-user-select: none;    /*火狐*/    -ms-user-select: none;    /*......
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by Hoyup on
-        2018-12-12
-    </p>
-
-</div>
+<h2 id="ios10-button-flex布局-justify-content无效"><a href="#ios10-button-flex布局-justify-content无效" class="headerlink" title="ios10 button flex布局 justify-content无效"></a>ios10 button flex布局 justify-content无效</h2><p> 可以用一个非button的tag包裹，并对其用flex布局</p>
+<h2 id="ios-自定义modal-滚动穿透"><a href="#ios-自定义modal-滚动穿透" class="headerlink" title="ios 自定义modal 滚动穿透"></a>ios 自定义modal 滚动穿透</h2><p> 如果modal样式如下：<br> <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.modal</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: fixed;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.5</span>);</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p> 这样的modal出现后如果原本父级可以scroll会导致滚动穿透（即modal不动，但父级图层可以滑动）<br> 解决方案是css结合js，首先当modal出现时给body设置position :fixed，但这样会导致窗口scroll位置回到顶部，这时候要给body设置原来scroll位置的一个top负值。代码如下：<br> <figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public handleOpenModal = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">this</span>.scrollTop = <span class="built_in">document</span>.body.scrollTop || <span class="built_in">document</span>.documentElement!.scrollTop;</span><br><span class="line">  <span class="built_in">document</span>.body.style.cssText += <span class="string">'position:fixed;top:-'</span> + <span class="keyword">this</span>.scrollTop + <span class="string">'px;'</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">public handleCloseModal = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">document</span>.body.style.position = <span class="string">''</span>;</span><br><span class="line">  <span class="built_in">document</span>.body.style.top = <span class="string">''</span>;</span><br><span class="line">  <span class="built_in">document</span>.body.scrollTop = <span class="keyword">this</span>.scrollTop;</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">document</span>.documentElement) &#123;</span><br><span class="line">    <span class="built_in">document</span>.documentElement.scrollTop = <span class="keyword">this</span>.scrollTop;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h2 id="这个方法也不完美。经实测在ios刘海屏里对body应用position-fixed会使底部出现safearea的padding顶上来。"><a href="#这个方法也不完美。经实测在ios刘海屏里对body应用position-fixed会使底部出现safearea的padding顶上来。" class="headerlink" title=" 这个方法也不完美。经实测在ios刘海屏里对body应用position fixed会使底部出现safearea的padding顶上来。"></a> 这个方法也不完美。经实测在ios刘海屏里对body应用position fixed会使底部出现safearea的padding顶上来。</h2><h2 id="设置文本input的placeholder样式-sass"><a href="#设置文本input的placeholder样式-sass" class="headerlink" title="设置文本input的placeholder样式(sass)"></a>设置文本input的placeholder样式(sass)</h2> <figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">input &#123;</span><br><span class="line">   <span class="variable">@mixin</span> car-number-placeholder &#123;</span><br><span class="line">       <span class="symbol">color:</span> <span class="comment">#64646A;</span></span><br><span class="line">       <span class="symbol">opacity:</span> <span class="number">0</span>.<span class="number">16</span>;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   &amp;<span class="symbol">:</span><span class="symbol">:-moz-placeholder</span> &#123;</span><br><span class="line">       <span class="variable">@include</span> car-number-placeholder;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   &amp;<span class="symbol">:</span><span class="symbol">:-webkit-input-placeholder</span> &#123;</span><br><span class="line">       <span class="variable">@include</span> car-number-placeholder;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   &amp;<span class="symbol">:-ms-input-placeholder</span> &#123;</span><br><span class="line">       <span class="variable">@include</span> car-number-placeholder;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
-
-<div class="post-preview">
-
-    <a href="/2018/09/06/2018蚂蚁前端社招面经/">
-        <h2 class="post-title">
-            2018蚂蚁前端社招面经
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            上周一位去蚂蚁的前同事发了蚂蚁的Alipay HK的前端岗位的内推给我，趁着最近进度不是很赶就投了简历。大概一个星期后的昨晚接到了电面。一面的面试官还是很nice的，声音听上去挺年轻的。面试一开始面试官主要是结合你的项目问你所使用的技术，项目的背景，以及你在项目中的职责。不会问太多关于技术的细节。由于我之前主要是用RN做App的，但是他们的团队貌似是用Native+web混合开发，不存在使用......
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by Hoyup on
-        2018-09-06
-    </p>
-
-</div>
+<h2 id="ios-input框placeholder无法垂直居中"><a href="#ios-input框placeholder无法垂直居中" class="headerlink" title="ios input框placeholder无法垂直居中"></a>ios input框placeholder无法垂直居中</h2><p> 设置 line-height: normal;</p>
 <hr>
-
-<div class="post-preview">
-
-    <a href="/2018/05/17/关于react-navigation-点击过快出现dulplicate路由的解决方案/">
-        <h2 class="post-title">
-            关于react-navigation 点击过快出现dulplicate路由的解决方案
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            最近做的几个react native 项目都用到了 react navigation 这个路由框架。react navigation 这个框架有着堪称原生性能的路由框架在发布不久就基本把RN其他框架给比下去了。它功能非常强大，可配置性很高，虽然一开始上手会有点困难但熟练后简直是路由神器。不过最近我发现一个问题，当你点击跳转路由按键过快会导致重复弹出相同的路由，这简直不能忍。这算不算点击穿......
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by Hoyup on
-        2018-05-17
-    </p>
-
-</div>
+<h2 id="react-router-v4-在静态资源服务器下使用-BrowserRouter-会导致白屏无法渲染"><a href="#react-router-v4-在静态资源服务器下使用-BrowserRouter-会导致白屏无法渲染" class="headerlink" title="react-router(v4) 在静态资源服务器下使用 BrowserRouter 会导致白屏无法渲染"></a>react-router(v4) 在静态资源服务器下使用 BrowserRouter 会导致白屏无法渲染</h2><p> 改用 HashRouter</p>
 <hr>
-
-<div class="post-preview">
-
-    <a href="/2018/05/15/first-post/">
-        <h2 class="post-title">
-            first post
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            花了大概1个小时终于搞定这个blog。hexo还是挺好用的。后面有文章都会post到这上面来。
-      
-        ...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by Hoyup on
-        2018-05-15
-    </p>
-
-</div>
+<h2 id="ios10的flex布局的div如果没有设置高度（如通过flex或者100-指定高度），子div高度100-无效"><a href="#ios10的flex布局的div如果没有设置高度（如通过flex或者100-指定高度），子div高度100-无效" class="headerlink" title="ios10的flex布局的div如果没有设置高度（如通过flex或者100%指定高度），子div高度100%无效"></a>ios10的flex布局的div如果没有设置高度（如通过flex或者100%指定高度），子div高度100%无效</h2><p> 对父div设置固定高度或者子div设置固定高度</p>
 <hr>
+<h2 id="ios11-12遇到刘海屏会webview会默认对其设置一个safearea的padding-bottom"><a href="#ios11-12遇到刘海屏会webview会默认对其设置一个safearea的padding-bottom" class="headerlink" title="ios11,12遇到刘海屏会webview会默认对其设置一个safearea的padding-bottom"></a>ios11,12遇到刘海屏会webview会默认对其设置一个safearea的padding-bottom</h2><p> 要使屏幕底部的padding消失需要在meta的viewport设置 viewport-fit=cover</p>
+<hr>
+<h2 id="ios对body设置position-fixed-要慎用"><a href="#ios对body设置position-fixed-要慎用" class="headerlink" title="ios对body设置position: fixed;要慎用"></a>ios对body设置position: fixed;要慎用</h2><p> 这样设置样式会在ios下有两个问题：<br> 1）底部设置的viewport-fit=cover失效，即底部会出现safe-area的padding-bottom<br> 2）input框初始点击能唤起键盘，点击完成后点击键盘不能唤起，需要长按或多次点击才能唤起</p>
+<hr>
+<h2 id="ios-设置-input-placeholder-垂直居中"><a href="#ios-设置-input-placeholder-垂直居中" class="headerlink" title="ios 设置 input placeholder 垂直居中"></a>ios 设置 input placeholder 垂直居中</h2><figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">line</span>-<span class="built_in">height</span>: <span class="built_in">normal</span>;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="iOS-10-fetch-需要polyfill"><a href="#iOS-10-fetch-需要polyfill" class="headerlink" title="iOS 10 fetch 需要polyfill"></a>iOS 10 fetch 需要polyfill</h2><hr>
+<h2 id="部分Android手机-小米，oppo-不支持history-go-慎用"><a href="#部分Android手机-小米，oppo-不支持history-go-慎用" class="headerlink" title="部分Android手机(小米，oppo)不支持history.go(),慎用"></a>部分Android手机(小米，oppo)不支持history.go(),慎用</h2>
+      <script>
+        window.disqusProxy={
+          shortname: 'uuau99999',
+          username: 'uuau99999',
+          server: 'disqus-proxy.ycwalker.com',
+          port: 443,
+          adminAvatar: '/avatars/admin-avatar.jpg',
+          identifier: '2018/12/12/h5常见问题汇总/',
+        };
+        window.disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = window.disqusProxy.identifier;
+        };
+      </script></div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2018/09/06/2018蚂蚁前端社招面经/">2018蚂蚁前端社招面经</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-09-06</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/前端/">前端</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/蚂蚁金服/">蚂蚁金服</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/面经/">面经</a></span><div class="content"><p>上周一位去蚂蚁的前同事发了蚂蚁的Alipay HK的前端岗位的内推给我，趁着最近进度不是很赶就投了简历。大概一个星期后的昨晚接到了电面。<br>一面的面试官还是很nice的，声音听上去挺年轻的。面试一开始面试官主要是结合你的项目问你所使用的技术，项目的背景，以及你在项目中的职责。不会问太多关于技术的细节。由于我之前主要是用RN做App的，但是他们的团队貌似是用Native+web混合开发，不存在使用RN或者是Weex这种技术。当然一开始他也问我为什么不用阿里的Weex。我说Weex文档写的不健全社区也不活跃，而且之前我们团队有用react做过web基于同样的技术栈所以选择了RN。并且国内Weex貌似除了阿里以外没什么公司会用。然后面试官尴尬的笑着说其实他们自己也不用的- -。</p>
+<p>接下来他让我挑几个我觉得有亮点的项目跟他讲解一下。我就主要讲了之前用Cordova/Ionic做的一个Hybrid的App，后面由于性能原因升级到React Native。他问我们的性能是用什么量化指标去评估的，我也不知道怎么回答就说业务觉得界面开始有点卡而且在外包咨询公司的怂恿下决定升级到RN。。。然后他问那你们在项目中有做过哪些优化，性能，代码，重构都可以。我就把react里面的一些最佳实践说了一下，如对于复杂state的容器使用shouldComponentUpdate去做一层判断，当然我们一般很懒都直接用react-redux的connect方法用redux自带的shouldComponentUpdate去优化性能。除此以外也通过大量的pure component保证了底层的组件不会过多重复渲染。还有就是关于RN的列表，flatlist使用的VirtualizedList通过延迟渲染避免了列表长度大加载卡顿的情况。<br>后面我也跟他说了我用websocket做了一套运行在RN上面的实时推送功能。这时候面试官就大概问了一下我是怎么管理这个node服务的，比如怎么监控，负载怎么做的，单机并发多少。我就说公司有paas平台会对服务进行监控，多实例负载也是paas上做的。我同时用了cluster在一个实例上fork多个线程用Round-Robin算法来充分利用多核性能去做负载。压测单机并发可稳定在30k左右。接下来就是问的关于安全的问题。比如你们App怎么做授权的。怎么保证安全。我说我们通过token来和服务器交互，token是加密存储在keysotre/SE中的。对于敏感操作有短信的二次验证来保证安全。接着他又问那你们有没用过一些在客户端本地验证token的方法，我回答jwt算吗。他说也算。那jwt有什么优势和劣势呢。我说优势是可以做分布式的权限校验，而且token中带有用户基本信息不需要再向服务器发请求确定用户身份。jwt还可以用来做单点登录。jwt劣势在于它的验证机制是基于签名的。一旦token泄露后端也没有方法取消对这个token的授权。面试官说那有没方法呢。我说就只能在服务端存储关于token的记录。当验证token的时候除了校验签名还要去保证服务端这边是有对应的。但如果这个好像就没必要用jwt了- -。后面还问了关于csrf、xss的防范。</p>
+<p>除了上面这些还问了我关于前端构建工具的选择和搭建，同时也问我更趋向做web前端还是Native。我说更趋向web，也想做Node。他说他们那里Node的应用还是很多的。然后问我有什么问题。我就问了一下他们那边的业务背景、技术栈和工程实践，大致了解了一下。<br>一面大概持续了40分钟。强度不是特别高。面试官也比较有耐心。</p>
+<p>然后今天中午就收到下午两点二面的通知。心想我靠这么频繁的吗。都没时间准备。</p>
+<p>二面基本就是被打击了。。。</p>
+<p>跟一面不一样，二面的面试官听上去明显就更年长一下，应该是技术主管之类的。一开始也是问了我们是怎么做技术选型的。我扯了一堆理由后面试官就开始问一些深入的问题了，比如你用到了websocket，那websocket的报文格式有了解吗，用的是http还是tcp，跟http有什么关系，http的keep-alive跟websocket有什么不一样呢。。。然后又问你们node服务是部署在linux上的吧，那底层连接怎么管理的呢，了解e-poll吗，有了解过http2吗。这些我基本都答不上来，然后他说看来你还是在应用级别，没有考虑过它有一天崩了怎么处理呢。。。<br>接下来换了个方向，关于react的。如为什么react有virtual dom呢。dom diff算法是怎么样的呢。自己用算法描述react的dom diff算法。了解受控组件和非受控组件吗。这些我只能回答一些比较浅的。然后面试官也很耐心，答不上来就尴尬的笑了换下一个问题。<br>后面是js基础。关于闭包，以及原理，（如闭包为什么不会释放，内存gc算法，我只回答了引用计数，标记清除竟然忘了。。）知道严格模式吗，跟非严格模式有什么区别。如何在js实现继承对象属性（我说用__proto__指向目标的原型对象，他问有没正规的用法，我说好像有个Object.setPrototypeOf的方法。。。），如何实现迭代器，ES6新增的for of怎么用的，跟for in 的区别。js有哪些基本类型。number精度多少，settimeout为什么会有延迟误差，怎么实现跨域。这些基本都回答上来了。他说我js基础还行。但有些知识还是要去补习了解一下。<br>最后面试官还怕我哪些特长他忽略了没有问我，我说应该没有了哈哈- -。最后也是他对我进行了一些简单点评。他说我定位有点模糊。前端和node都不是特别专。而阿里倾向于招专才，或者是全才，但必须在某方面要特别突出的。<br>二面持续了大概一个小时。说的我口都干了。。也心疼面试官，感觉他后面应该很无奈了- -</p>
+<p>感觉自己应该跪在二面了。其实自己也没有充分准备，只是想投着看看。这次面试给我的收获也是很大的。我也发现了平时很多没有去仔细研究的地方。搞技术不是只会用框架，应该花时间去了解他的原理。另外要对自己的发展有明确方向。你不可能所有方面都很突出，必须要在某方面建立自己的优势。</p>
+<p>嗯。努力吧。明年的自己肯定又不一样了。</p>
 
+      <script>
+        window.disqusProxy={
+          shortname: 'uuau99999',
+          username: 'uuau99999',
+          server: 'disqus-proxy.ycwalker.com',
+          port: 443,
+          adminAvatar: '/avatars/admin-avatar.jpg',
+          identifier: '2018/09/06/2018蚂蚁前端社招面经/',
+        };
+        window.disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = window.disqusProxy.identifier;
+        };
+      </script></div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2018/05/17/关于react-navigation-点击过快出现dulplicate路由的解决方案/">关于react-navigation 点击过快出现dulplicate路由的解决方案</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-05-17</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/react-native/">react native</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/react-navigation/">react navigation</a></span><div class="content"><p>最近做的几个react native 项目都用到了 react navigation 这个路由框架。react navigation 这个框架有着堪称原生性能的路由框架在发布不久就基本把RN其他框架给比下去了。它功能非常强大，可配置性很高，虽然一开始上手会有点困难但熟练后简直是路由神器。不过最近我发现一个问题，当你点击跳转路由按键过快会导致重复弹出相同的路由，这简直不能忍。这算不算点击穿透？令我惊讶的是react navigation 官方团队竟然到现在还没解决这个问题。。。</p>
+<p>我后来在网上看到不少人都遇到这个问题，主要有以下2种解决方案：</p>
+<ol>
+<li><p>通过debounce方式，即通过setTimeout方法，当用户点击跳转路由按钮就给点击事件设置一个setTimeout事件，通过一个状态位把这个按钮的响应在接下来几秒内屏蔽掉。  </p>
+ <figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">this.<span class="keyword">state</span>.disabled = true</span><br><span class="line"><span class="built_in">set</span>Timeout(() =&gt; &#123;  </span><br><span class="line">    this.<span class="keyword">state</span>.disabled = false)  </span><br><span class="line">&#125;, <span class="number">2000</span>)</span><br></pre></td></tr></table></figure>
+<p> 这种方法需要在所以点击事件注入这段代码，既不优雅且维护成本高。没有采用这种方案。  </p>
+</li>
+</ol>
+<ol start="2">
+<li><p>如果你的项目引用了redux 并集成了 react navigation， 可以用下面这种方案：  </p>
+<p> 按照react navigation官方集成教学，你的路由的reducer应该是这个样子的：</p>
+ <figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import Router <span class="keyword">from</span> '../../components/Router'</span><br><span class="line">const navReducer = (<span class="keyword">state</span>, action) =&gt; &#123;</span><br><span class="line">    const newState = Router.router.getStateForAction(action, <span class="keyword">state</span>);</span><br><span class="line">    return newState || <span class="keyword">state</span>;</span><br><span class="line">&#125;</span><br><span class="line">export <span class="keyword">default</span> navReducer</span><br></pre></td></tr></table></figure>
+<p> 我们要改动的，就是这个reducer。其实就是覆写react navigation关于路由state计算的逻辑。在默认情况下，我们用了react navigation 提供的Router.router.getStateForAction 方法去根据当前state和action算出下一步的state。这里state的变化会对应我们的路由栈。如果我们想要防止上面说的多次点击出现重复的路由，就需要在计算路由变化时，判断下一步action的跳转路由是不是跟当前一致，如果是则直接返回当前state，否则就使用Router.router.getStateForAction 计算state并返回。代码如下：</p>
+ <figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import Router <span class="keyword">from</span> '../../components/Router'</span><br><span class="line"></span><br><span class="line">function _getCurrentRoute(navState) &#123;</span><br><span class="line">    if (navState.hasOwnProperty('index')) &#123;</span><br><span class="line">        return _getCurrentRoute(navState.routes[navState.index])</span><br><span class="line">    &#125;</span><br><span class="line">    return navState</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export const reducer = (<span class="keyword">state</span>, action) =&gt; &#123;</span><br><span class="line">    const &#123; type, routeName &#125; = action</span><br><span class="line">    if (type.startsWith('Navigation/')) &#123;</span><br><span class="line">        const lastRoute = _getCurrentRoute(<span class="keyword">state</span>)</span><br><span class="line">        if (routeName === lastRoute.routeName) &#123;</span><br><span class="line">            return <span class="keyword">state</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    const newState = Router.router.getStateForAction(action, <span class="keyword">state</span>)</span><br><span class="line">    if (newState) &#123;</span><br><span class="line">        newState.currentRoute = _getCurrentRoute(newState)</span><br><span class="line">    &#125;</span><br><span class="line">    return newState || <span class="keyword">state</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 这里通过一个_getCurrentRoute递归方法去找到当前的route，我算出来同时还把它放到了state里面的currentRoute，这样在别的地方也能通过redux 注入currentRoute获取到当前的route信息了。</p>
+<hr>
+<p> P.S.<br> 对于不使用redux的react navigation v2以上用户，可以用以下方法：<br> 在root component：</p>
+ <figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">constructor(props: <span class="literal">any</span>) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.AppNavigation = createNavigator(...);</span><br><span class="line">    this.AppNavigation.router.getStateForAction = navigateOnce(this.AppNavigation.router.getStateForAction);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">render() &#123;</span><br><span class="line">    return <span class="variable">&lt;this.AppNavigation /&gt;</span>;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">const navigateOnce = (getStateForAction: <span class="literal">any</span>) =&gt; (action: <span class="literal">any</span>, <span class="keyword">state</span>: <span class="literal">any</span>) =&gt; &#123;</span><br><span class="line">    const &#123; type, routeName &#125; = action;</span><br><span class="line">    if (</span><br><span class="line">      <span class="keyword">state</span> &amp;&amp;</span><br><span class="line">      (type === NavigationActions.NAVIGATE || type === StackActions.PUSH) &amp;&amp;</span><br><span class="line">      routeName === <span class="keyword">state</span>.routes[<span class="keyword">state</span>.routes.length - <span class="number">1</span>].routeName</span><br><span class="line">    ) &#123;</span><br><span class="line">      return null;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      return getStateForAction(action, <span class="keyword">state</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+</ol>
 
-
-<!-- Pager -->
-
-<ul class="pager">
-    
-    
-</ul>
-
-
-
-                <!-- 如果开启评论功能 -->
-                
-
-            </div>
-    <!-- Sidebar Container -->
-            <div class="
-                col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
-                col-sm-12
-                col-xs-12
-                sidebar-container
-            ">
-                <!-- Featured Tags -->
-                
-                <section>
-                    <!-- no hr -->
-                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
-                    <div class="tags">
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                    </div>
-                </section>
-                
-
-                <!-- Short About -->
-                <section class="visible-md visible-lg">
-                    <hr><h5><a href="/about/">ABOUT ME</a></h5>
-                    <div class="short-about">
-
-                        
-                            <img src="/img/avatar.jpeg" />
-                        
-
-                        
-                            <p>码农一枚</p>
-                        
-
-                        <!-- SNS Link -->
-                        <ul class="list-inline">
-                            
-                            
-                            
-
-                            
-
-                            
-
-                            
-                                <li>
-                                    <a target="_blank"  href="https://github.com/uuau99999">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                            
-                            
-                            
-                            
-                        </ul>
-                    </div>
-                </section>
-                
-                <!-- Friends Blog -->
-                
-                <hr>
-                <h5>FRIENDS</h5>
-                <ul class="list-inline">
-
-                    
-                </ul>
-                
-            </div>
-        
-    </div>
-</div>
-
-
-    <!-- Footer -->
-    <!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
-                
-                
-                
-
-                
-
-                
-
-                
-                    <li>
-                        <a target="_blank"  href="https://github.com/uuau99999">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                
-
-                
-
-                </ul>
-                <p class="copyright text-muted">
-                    Copyright &copy; Hoyup&#39;s Blog 2019 
-                    <br>
-                    Theme by <a href="http://huangxuan.me">Hux</a> 
-                    <span style="display: inline-block; margin: 0 5px;">
-                        <i class="fa fa-heart"></i>
-                    </span> 
-                    Ported by <a href="http://blog.kaijun.rocks">Kaijun</a> | 
-                    <iframe
-                        style="margin-left: 2px; margin-bottom:-5px;"
-                        frameborder="0" scrolling="0" width="91px" height="20px"
-                        src="https://ghbtns.com/github-btn.html?user=kaijun&repo=hexo-theme-huxblog&type=star&count=true" >
-                    </iframe>
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- jQuery -->
-<script src="/js/jquery.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="/js/bootstrap.min.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="/js/hux-blog.min.js"></script>
-
-
-<!-- async load function -->
-<script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
-</script>
-
-<!-- 
-     Because of the native support for backtick-style fenced code blocks 
-     right within the Markdown is landed in Github Pages, 
-     From V1.6, There is no need for Highlight.js, 
-     so Huxblog drops it officially.
-
-     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
-     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
--->
-<!--
-    <script>
-        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
-            hljs.initHighlightingOnLoad();
-        })
-    </script>
-    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
--->
-
-
-<!-- jquery.tagcloud.js -->
-<script>
-    // only load tagcloud.js in tag.html
-    if($('#tag_cloud').length !== 0){
-        async("/js/jquery.tagcloud.js",function(){
-            $.fn.tagcloud.defaults = {
-                //size: {start: 1, end: 1, unit: 'em'},
-                color: {start: '#bbbbee', end: '#0085a1'},
-            };
-            $('#tag_cloud a').tagcloud();
-        })
-    }
-</script>
-
-<!--fastClick.js -->
-<script>
-    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
-        var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
-    })
-</script>
-
-
-<!-- Google Analytics -->
-
-
-<script>
-    // dynamic User by Hux
-    var _gaId = 'UA-119396317-1';
-    var _gaDomain = 'uuau99999.github.io';
-
-    // Originial
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', _gaId, _gaDomain);
-    ga('send', 'pageview');
-</script>
-
-
-
-
-<!-- Baidu Tongji -->
-
-<script>
-    // dynamic User by Hux
-    var _baId = 'be487d8575ef4be7f18a9c96d00c8dfd';
-
-    // Originial
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?" + _baId;
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-</script>
-
-
-<!-- Side Catalog -->
-
-
-
-
-
-<!-- Image to hack wechat -->
-<img src="/img/icon_wechat.png" width="0" height="0" />
-<!-- Migrate from head to bottom, no longer block render and still work -->
-
-</body>
-
-</html>
+      <script>
+        window.disqusProxy={
+          shortname: 'uuau99999',
+          username: 'uuau99999',
+          server: 'disqus-proxy.ycwalker.com',
+          port: 443,
+          adminAvatar: '/avatars/admin-avatar.jpg',
+          identifier: '2018/05/17/关于react-navigation-点击过快出现dulplicate路由的解决方案/',
+        };
+        window.disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = window.disqusProxy.identifier;
+        };
+      </script></div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2018/05/15/first-post/">first post</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-05-15</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/new/">new</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/new-post/">new post</a></span><div class="content"><h3 id="花了大概1个小时终于搞定这个blog。hexo还是挺好用的。后面有文章都会post到这上面来。"><a href="#花了大概1个小时终于搞定这个blog。hexo还是挺好用的。后面有文章都会post到这上面来。" class="headerlink" title="花了大概1个小时终于搞定这个blog。hexo还是挺好用的。后面有文章都会post到这上面来。"></a>花了大概1个小时终于搞定这个blog。hexo还是挺好用的。后面有文章都会post到这上面来。</h3>
+      <script>
+        window.disqusProxy={
+          shortname: 'uuau99999',
+          username: 'uuau99999',
+          server: 'disqus-proxy.ycwalker.com',
+          port: 443,
+          adminAvatar: '/avatars/admin-avatar.jpg',
+          identifier: '2018/05/15/first-post/',
+        };
+        window.disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = window.disqusProxy.identifier;
+        };
+      </script></div><hr></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2019 By Hoyup</div><div class="framework-info"><span>Driven - </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span><span></span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+}</script></body></html>
